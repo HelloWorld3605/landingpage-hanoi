@@ -1,59 +1,18 @@
 import { Canvas } from "@react-three/fiber";
-import {
-  OrbitControls,
-  useGLTF,
-  Center,
-  Environment,
-  useAnimations,
-} from "@react-three/drei";
-import { FC, Suspense, useState, useEffect } from "react";
-import { Group, BackSide, AnimationClip, LoopOnce } from "three";
+import { OrbitControls, useGLTF, Center, Environment } from "@react-three/drei";
+import { FC, Suspense } from "react";
+import { Group, BackSide } from "three";
 
 type GLTFResult = {
   scene: Group;
-  animations: AnimationClip[];
 };
 
 const Model: FC = () => {
-  const { scene, animations } = useGLTF(
-    "/models/demo2/scene.gltf"
-  ) as unknown as GLTFResult;
-  const { actions } = useAnimations(animations, scene);
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    // Play the first animation found
-    const actionName = Object.keys(actions)[0];
-    const action = actions[actionName];
-
-    if (action) {
-      action.setLoop(LoopOnce, 1);
-      action.clampWhenFinished = true;
-
-      if (isOpen) {
-        action.reset().fadeIn(0.1).play();
-        action.timeScale = 1; // Normal speed
-      } else {
-        // Reverse animation to close
-        action.timeScale = -1;
-        action.paused = false;
-      }
-    }
-  }, [isOpen, actions]);
-
+  const { scene } = useGLTF("/models/demo1/scene.gltf") as GLTFResult;
   return (
     <Center>
       <Environment preset="city" />
-      <primitive
-        object={scene}
-        scale={1.2}
-        onClick={(e: any) => {
-          e.stopPropagation();
-          setIsOpen(!isOpen);
-        }}
-        onPointerOver={() => (document.body.style.cursor = "pointer")}
-        onPointerOut={() => (document.body.style.cursor = "auto")}
-      />
+      <primitive object={scene} scale={1.2} />
     </Center>
   );
 };
@@ -94,4 +53,4 @@ const ProductModel: FC = () => {
 export default ProductModel;
 
 /* Optional: preload để load trước model */
-useGLTF.preload("/models/demo2/scene.gltf");
+useGLTF.preload("/models/demo1/scene.gltf");
