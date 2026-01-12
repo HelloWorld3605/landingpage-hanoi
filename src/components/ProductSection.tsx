@@ -84,7 +84,7 @@ export function IncludedSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div className="flex items-center gap-4 mb-8" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
           <h2 className="text-3xl md:text-5xl font-bold tracking-widest uppercase">
-            What's Included
+            Hộp kí ức Hà Nội
           </h2>
           <div className="h-px flex-1 bg-white/20" />
         </motion.div>
