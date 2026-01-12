@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Globe, Instagram, Send, Video } from "lucide-react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 export function Header() {
@@ -9,9 +10,8 @@ export function Header() {
   });
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "py-4 bg-black/30 backdrop-blur-lg" : "py-6 bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "py-4 bg-black/30 backdrop-blur-lg" : "py-6 bg-transparent"
+        }`}
       initial={{
         y: -100,
       }}
@@ -46,6 +46,9 @@ export function Header() {
           >
             Liên hệ
           </a>
+          <Link to="/test-3d" className="hover:text-amber-200 transition-colors text-amber-500 font-bold">
+            Test 3D
+          </Link>
         </nav>
 
         {/* Right Actions */}

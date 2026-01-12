@@ -44,7 +44,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden flex flex-col justify-end pb-12 md:pb-24 group">
+    <section id="hero" className="relative min-h-screen w-full overflow-hidden flex flex-col justify-end pb-12 md:pb-24 group">
       {/* Background Carousel */}
       <AnimatePresence>
         <motion.div

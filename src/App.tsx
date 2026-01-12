@@ -1,19 +1,15 @@
 import React from 'react';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { AboutSection } from './components/AboutSection';
-import { IncludedSection } from './components/IncludedSection';
-import { ContactSection } from './components/ContactSection';
-import { Footer } from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { LandingPage } from './pages/LandingPage';
+import { ModelTestPage } from './pages/ModelTestPage';
+
 export function App() {
-  return <div className="bg-black min-h-screen text-white selection:bg-amber-500 selection:text-white">
-      <Header />
-      <main>
-        <Hero />
-        <AboutSection />
-        <IncludedSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/test-3d" element={<ModelTestPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
