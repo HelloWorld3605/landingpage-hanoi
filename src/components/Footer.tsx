@@ -1,5 +1,5 @@
 import React from "react";
-import { Globe, Instagram, Video, Send } from "lucide-react";
+import { Globe, Instagram, Facebook } from "lucide-react";
 export function Footer() {
   return (
     <footer className="bg-[#111] text-white py-12 px-4 md:px-6 border-t border-white/10">
@@ -27,13 +27,26 @@ export function Footer() {
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-4 text-white/60">
             <a href="#" className="hover:text-white transition-colors">
+              <Facebook className="w-4 h-4" />
+            </a>
+            <a href="#" className="hover:text-white transition-colors">
               <Instagram className="w-4 h-4" />
             </a>
             <a href="#" className="hover:text-white transition-colors">
-              <Video className="w-4 h-4" />
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              <Send className="w-4 h-4" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-4 h-4"
+              >
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg>
             </a>
           </div>
         </div>

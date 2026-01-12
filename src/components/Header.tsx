@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Globe, Instagram, Send, Video } from "lucide-react";
+import { Globe, Instagram, Facebook } from "lucide-react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,13 +52,26 @@ export function Header() {
         <div className="flex items-center gap-6">
           <div className="hidden md:flex items-center gap-4">
             <a href="#" className="hover:text-amber-200 transition-colors">
+              <Facebook className="w-4 h-4" />
+            </a>
+            <a href="#" className="hover:text-amber-200 transition-colors">
               <Instagram className="w-4 h-4" />
             </a>
             <a href="#" className="hover:text-amber-200 transition-colors">
-              <Video className="w-4 h-4" />
-            </a>
-            <a href="#" className="hover:text-amber-200 transition-colors">
-              <Send className="w-4 h-4" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-4 h-4"
+              >
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg>
             </a>
           </div>
         </div>
