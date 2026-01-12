@@ -16,7 +16,7 @@ const slides = [
   {
     id: 3,
     title: "Nhà Hát Lớn",
-    image: "nhà hát lớn.jpg",
+    image: "nhà hát lớn 1.JPG",
   },
   {
     id: 4,

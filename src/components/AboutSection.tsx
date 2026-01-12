@@ -1,28 +1,30 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 const timeline = [
   {
-    days: "Days 1-3",
-    city: "Osaka",
+    label: "Buổi sáng",
+    place: "Hồ Gươm",
     image:
-      "https://images.unsplash.com/photo-1590559399607-57505cd27e54?q=80&w=200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600664223430-ef53a1f2b6a4?q=80&w=200&auto=format&fit=crop",
     align: "right",
   },
   {
-    days: "Days 4-6",
-    city: "Kyoto",
+    label: "Nhịp sống",
+    place: "Phố Cổ",
     image:
-      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1589187155475-5c7c4c9a8c4a?q=80&w=200&auto=format&fit=crop",
     align: "left",
   },
   {
-    days: "Days 7-10",
-    city: "Tokyo",
+    label: "Chiều muộn",
+    place: "Hồ Tây",
     image:
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1599127989103-7e6bcbf9f6df?q=80&w=200&auto=format&fit=crop",
     align: "right",
   },
 ];
+
 export function AboutSection() {
   return (
     <section
@@ -30,19 +32,12 @@ export function AboutSection() {
       className="bg-[#111] text-white py-24 px-4 md:px-6 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
+        {/* Title */}
         <motion.div
           className="flex items-center justify-center gap-4 mb-20"
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
         >
           <div className="h-px w-12 md:w-24 bg-white/30" />
           <h2 className="text-3xl md:text-5xl font-bold tracking-widest text-center uppercase">
@@ -55,45 +50,34 @@ export function AboutSection() {
           {/* Left: Description */}
           <motion.div
             className="space-y-8"
-            initial={{
-              opacity: 0,
-              x: -50,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.6,
-            }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl md:text-3xl font-light leading-relaxed text-white/90">
-              We've planned a simple and convenient{" "}
+              Hà Nội không chỉ là một thành phố, mà là{" "}
               <span className="text-amber-200 font-normal">
-                10-day itinerary
-              </span>{" "}
-              for your trip to Japan.
-            </h3>
-            <p className="text-xl text-white/70">
-              You'll visit three cities: <br />
-              <span className="text-amber-400 text-2xl font-serif">
-                Osaka, Kyoto, and Tokyo.
+                nơi cất giữ ký ức
               </span>
+              .
+            </h3>
+
+            <p className="text-xl text-white/70">
+              Ở đây có những buổi sáng chậm rãi, những con phố cũ, và những
+              chiều gió lặng bên mặt hồ.
             </p>
+
             <p className="text-white/60 leading-loose max-w-md">
-              No need to worry about routes, schedules, or finding places —
-              everything is already organized. We'll show you where to go, what
-              to see, and where to eat, so you can simply{" "}
-              <span className="text-amber-200">enjoy the journey</span>.
+              Mỗi góc phố, mỗi quán cà phê, mỗi con đường quen thuộc đều mang
+              theo một câu chuyện rất riêng. Hà Nội không ồn ào để gây ấn tượng
+              — Hà Nội ở lại rất lâu trong ký ức.
             </p>
 
             <div className="pt-8">
               <img
-                src="https://images.unsplash.com/photo-1554797589-7241bb691973?q=80&w=400&auto=format&fit=crop"
-                alt="Japan Street"
+                src="https://images.unsplash.com/photo-1589187155475-5c7c4c9a8c4a?q=80&w=400&auto=format&fit=crop"
+                alt="Ha Noi Street"
                 className="rounded-lg opacity-80 hover:opacity-100 transition-opacity duration-500"
               />
             </div>
@@ -111,31 +95,21 @@ export function AboutSection() {
                   className={`flex flex-col md:flex-row items-center gap-8 ${
                     item.align === "left" ? "md:flex-row-reverse" : ""
                   }`}
-                  initial={{
-                    opacity: 0,
-                    y: 30,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    delay: index * 0.2,
-                  }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.2 }}
                 >
-                  {/* Text Content */}
+                  {/* Text */}
                   <div
                     className={`flex-1 ${
                       item.align === "left" ? "md:text-left" : "md:text-right"
                     } pl-12 md:pl-0`}
                   >
                     <span className="text-amber-200 text-sm tracking-widest uppercase mb-1 block">
-                      {item.days}
+                      {item.label}
                     </span>
-                    <h4 className="text-3xl font-bold">{item.city}</h4>
+                    <h4 className="text-3xl font-bold">{item.place}</h4>
                   </div>
 
                   {/* Dot */}
@@ -145,7 +119,7 @@ export function AboutSection() {
                   <div className="flex-1 pl-12 md:pl-0">
                     <img
                       src={item.image}
-                      alt={item.city}
+                      alt={item.place}
                       className="w-32 h-32 object-cover rounded-lg border border-white/20 shadow-2xl shadow-black/50 hover:scale-105 transition-transform duration-300"
                     />
                   </div>
