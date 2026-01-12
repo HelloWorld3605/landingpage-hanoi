@@ -32,19 +32,19 @@ export function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
           <a href="#about" className="hover:text-amber-200 transition-colors">
-            About
+            Giới thiệu
           </a>
           <a
             href="#included"
             className="hover:text-amber-200 transition-colors"
           >
-            Included
+            Dịch vụ
           </a>
           <a
             href="#contacts"
             className="hover:text-amber-200 transition-colors"
           >
-            Contacts
+            Liên hệ
           </a>
         </nav>
 
