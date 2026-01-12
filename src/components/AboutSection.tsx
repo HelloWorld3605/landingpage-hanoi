@@ -75,7 +75,7 @@ export function AboutSection() {
               <img
                 src="/about/hà nội street.jpg"
                 alt="Ha Noi Street"
-                className="rounded-lg opacity-80 hover:opacity-100 transition-opacity duration-500"
+                className="rounded-lg opacity-80 hover:opacity-100 transition-opacity duration-500 select-none"
               />
             </div>
           </motion.div>
@@ -121,7 +121,7 @@ export function AboutSection() {
                     <img
                       src={item.image}
                       alt={item.place}
-                      className="w-32 h-32 object-cover rounded-lg border border-white/20 shadow-2xl shadow-black/50 hover:scale-105 transition-transform duration-300"
+                      className="w-32 h-32 object-cover rounded-lg border border-white/20 shadow-2xl shadow-black/50 hover:scale-105 transition-transform duration-300 select-none"
                     />
                   </div>
                 </motion.div>
