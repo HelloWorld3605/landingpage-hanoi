@@ -45,17 +45,32 @@ const ProductSection: FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-white/70 leading-relaxed mb-8">
-              Một sản phẩm lưu trữ ký ức du lịch bằng công nghệ. Hộp ghi lại
-              hình ảnh, video, âm thanh, vị trí GPS và thời gian — tất cả được
-              hiển thị trên bản đồ ký ức cá nhân của bạn.
+            <h3 className="text-2xl md:text-3xl font-light leading-relaxed text-white/90 mb-6">
+              Một sản phẩm{" "}
+              <span className="text-amber-200 font-normal">lưu trữ ký ức</span>{" "}
+              du lịch bằng công nghệ.
+            </h3>
+
+            <p className="text-white/60 leading-loose mb-8">
+              Hộp ghi lại hình ảnh, video, âm thanh, vị trí GPS và thời gian —
+              tất cả được hiển thị trên bản đồ ký ức cá nhân của bạn.
             </p>
 
-            <ul className="space-y-3 text-sm text-white/60">
-              <li>• Lưu trữ ảnh & video theo địa điểm</li>
-              <li>• Ghi nhớ thời gian – thời tiết – tọa độ GPS</li>
-              <li>• Kết nối web / mobile / bản đồ cá nhân</li>
-              <li>• NFC / QR để mở ký ức</li>
+            <ul className="space-y-4">
+              {[
+                "Lưu trữ ảnh & video theo địa điểm",
+                "Ghi nhớ thời gian – thời tiết – tọa độ GPS",
+                "Kết nối web / mobile / bản đồ cá nhân",
+                "NFC / QR để mở ký ức",
+              ].map((item, index) => (
+                <li
+                  key={index}
+                  className="flex items-center gap-3 text-white/70"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-200" />
+                  {item}
+                </li>
+              ))}
             </ul>
           </motion.div>
         </div>

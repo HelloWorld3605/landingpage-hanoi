@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import { OrbitControls, useGLTF, Center } from "@react-three/drei";
 import { FC, Suspense } from "react";
 import { Group } from "three";
 
@@ -9,7 +9,11 @@ type GLTFResult = {
 
 const Model: FC = () => {
   const { scene } = useGLTF("/models/scene.gltf") as GLTFResult;
-  return <primitive object={scene} scale={1.2} />;
+  return (
+    <Center>
+      <primitive object={scene} scale={1.2} />
+    </Center>
+  );
 };
 
 const ProductModel: FC = () => {
