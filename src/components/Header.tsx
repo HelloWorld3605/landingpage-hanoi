@@ -24,7 +24,7 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between text-white">
         {/* Logo */}
-        <div className="flex items-center gap-2 font-bold text-lg tracking-wider">
+        <div className="flex items-center gap-2 font-bold text-lg tracking-wider select-none">
           <Globe className="w-5 h-5" />
           <span>Vietnam Explore</span>
         </div>
@@ -38,7 +38,7 @@ export function Header() {
             href="#included"
             className="hover:text-amber-200 transition-colors"
           >
-            Dịch vụ
+            Sản phẩm
           </a>
           <a
             href="#contacts"
