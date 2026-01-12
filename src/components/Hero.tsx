@@ -6,22 +6,22 @@ const slides = [
   {
     id: 1,
     title: "Lăng Bác",
-    image: "lăng bác.jpg",
+    image: "/banner/lăng bác.jpg",
   },
   {
     id: 2,
     title: "Hồ Gươm",
-    image: "hồ gươm.jpg",
+    image: "/banner/hồ gươm.jpg",
   },
   {
     id: 3,
     title: "Nhà Hát Lớn",
-    image: "nhà hát lớn 1.JPG",
+    image: "/banner/nhà hát lớn 1.JPG",
   },
   {
     id: 4,
     title: "Chùa Một Cột",
-    image: "chùa một cột.jpg",
+    image: "/banner/chùa một cột.jpg",
   },
 ];
 

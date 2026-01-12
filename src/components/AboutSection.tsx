@@ -5,22 +5,19 @@ const timeline = [
   {
     label: "Buổi sáng",
     place: "Hồ Gươm",
-    image:
-      "https://images.unsplash.com/photo-1600664223430-ef53a1f2b6a4?q=80&w=200&auto=format&fit=crop",
+    image: "/about/hồ gươm.jpg",
     align: "right",
   },
   {
     label: "Nhịp sống",
     place: "Phố Cổ",
-    image:
-      "https://images.unsplash.com/photo-1589187155475-5c7c4c9a8c4a?q=80&w=200&auto=format&fit=crop",
+    image: "/about/phố cổ.webp",
     align: "left",
   },
   {
     label: "Chiều muộn",
     place: "Hồ Tây",
-    image:
-      "https://images.unsplash.com/photo-1599127989103-7e6bcbf9f6df?q=80&w=200&auto=format&fit=crop",
+    image: "/about/hồ tây.jpg",
     align: "right",
   },
 ];
@@ -76,7 +73,7 @@ export function AboutSection() {
 
             <div className="pt-8">
               <img
-                src="https://images.unsplash.com/photo-1589187155475-5c7c4c9a8c4a?q=80&w=400&auto=format&fit=crop"
+                src="/about/hà nội street.jpg"
                 alt="Ha Noi Street"
                 className="rounded-lg opacity-80 hover:opacity-100 transition-opacity duration-500"
               />
@@ -116,7 +113,11 @@ export function AboutSection() {
                   <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-white rounded-full border-4 border-[#111] -translate-x-1/2 z-10" />
 
                   {/* Image */}
-                  <div className="flex-1 pl-12 md:pl-0">
+                  <div
+                    className={`flex-1 pl-12 md:pl-0 flex flex-col ${
+                      item.align === "left" ? "md:items-end" : ""
+                    }`}
+                  >
                     <img
                       src={item.image}
                       alt={item.place}
