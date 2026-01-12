@@ -46,9 +46,7 @@ export function Header() {
           >
             Liên hệ
           </a>
-          <Link to="/test-3d" className="hover:text-amber-200 transition-colors text-amber-500 font-bold">
-            Test 3D
-          </Link>
+
         </nav>
 
         {/* Right Actions */}

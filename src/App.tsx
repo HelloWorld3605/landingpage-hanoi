@@ -8,7 +8,6 @@ export function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/test-3d" element={<ModelTestPage />} />
       </Routes>
     </BrowserRouter>
   );
