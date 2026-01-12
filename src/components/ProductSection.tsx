@@ -48,7 +48,7 @@ const ProductSection: FC = () => {
             <h3 className="text-2xl md:text-3xl font-light leading-relaxed text-white/90 mb-6">
               Một sản phẩm{" "}
               <span className="text-amber-200 font-normal">lưu trữ ký ức</span>{" "}
-              du lịch bằng công nghệ.
+              bằng công nghệ.
             </h3>
 
             <p className="text-white/60 leading-loose mb-8">
