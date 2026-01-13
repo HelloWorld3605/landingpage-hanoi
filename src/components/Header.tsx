@@ -35,7 +35,7 @@ export function Header() {
             Giới thiệu
           </a>
           <a
-            href="#included"
+            href="#product"
             className="hover:text-amber-200 transition-colors"
           >
             Sản phẩm

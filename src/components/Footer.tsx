@@ -15,7 +15,7 @@ export function Footer() {
           <a href="#about" className="hover:text-white transition-colors">
             Giới thiệu
           </a>
-          <a href="#included" className="hover:text-white transition-colors">
+          <a href="#product" className="hover:text-white transition-colors">
             Sản phẩm
           </a>
           <a href="#contacts" className="hover:text-white transition-colors">
